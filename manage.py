@@ -9,5 +9,4 @@ if __name__ == "__main__":
 
     execute_from_command_line(sys.argv)
 
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+
