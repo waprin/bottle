@@ -12,4 +12,7 @@ def detail(request, poll_id):
 
 def vote(request, poll_id):
     return HttpResponse("You're voting on poll %s." % poll_id)
+
+def results(request, poll_id):
+    return HttpResponse("You're showing results for poll %s." % poll_id)
     
