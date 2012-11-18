@@ -170,8 +170,13 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "describe.context_processors.baseurl",
      )
 
-#EMAIL_HOST = 'smpt.sendgrid.net'
-#EMAIL_HOST_USER = '
+EMAIL_USE_TLS = True
+EMAIL_HOST= 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'waprin@gmail.com'
+EMAIL_HOST_PASSWORD = 'C0h33dR0cks'
 
-#import dj_database_url
-#DATABASES['default'] =  dj_database_url.config()
+
+
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()
