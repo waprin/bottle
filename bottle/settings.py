@@ -161,5 +161,17 @@ LOGGING = {
         },
     }
 }
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "describe.context_processors.baseurl",
+     )
+
+#EMAIL_HOST = 'smpt.sendgrid.net'
+#EMAIL_HOST_USER = '
+
+#import dj_database_url
+#DATABASES['default'] =  dj_database_url.config()

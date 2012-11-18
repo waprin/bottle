@@ -9,8 +9,7 @@ def index(request):
     c = Context({
         'latest_poll_list' : latest_poll_list,
     })
-    return HttpResponse("Site root is %s " % SITE_ROOT)
-    #return HttpResponse(t.render(c))
+    return HttpResponse(t.render(c))
 
 def detail(request, poll_id):
     return HttpResponse("you're looking at %s " %  poll_id);

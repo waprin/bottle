@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en>
+<head>
+    <meta charset="utf-8">
+    <title>Admire</title>
+    <meta name="description" content="Admire">
+    <link href="{{ BASE_URL }}/static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="{{ BASE_URL }}/static/css/crushed.css" rel="stylesheet" media="screen">
+</head>
+<body>
+ 
+    <div class="container-narrow">
+
+    <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <h3 class="muted">Subway Crushed</h3>
+    </div>
+
+    <div class="jumbotron">
+        <h1>Check in to be checked out.<h2>
+    </div>
+
+    <div class="signup-container">
+            <form class="form-horizontal" action="submit" method="GET">
+                <fieldset>
+                    <legend>Tell us about yourself: </legend>
+                    <label>Email</label>
+                    <input type="text" name="email" placeholder="Email...">
+                    <label>Gender</label>
+                    <select name="gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                     <label>Height</label>
+                     <span class="height">
+                        <div class="ft-append">
+                            <input name="feet" class="span1" type="text">
+                            <span class="add-on">ft</span>
+                        </div>
+                        <div class="inches-append">
+                            <input name="inches" class="span1" type="text">
+                            <span class="add-on">in</span>
+                        </div>
+                    </span>
+                    <label>Age</label>
+                    <input type="text" name="age" class="span2" placeholder="Age...">
+                     <label>Eyes</label>
+                     <select name="eyes">
+                        <option>Brown</option>
+                        <option>Blue</option>
+                        <option>Green</option>
+                        <option>Hazel</option>
+                        <option>Other</option>
+                     </select>
+                     <label>Hair Color</label>
+                     <select name="haircolor">
+                        <option>Black</option>
+                        <option>Blonde</option>
+                        <option>Brown</option>
+                        <option>Grey</option>
+                        <option>Red</option>
+                        <option>Other</option>
+                     </select>
+                     <label>Hair Length</label>
+                     <select name="hairlength">
+                        <option>Bald</option>
+                        <option>Short</option>
+                        <option>Medium</option>
+                        <option>Long</option>
+                     </select>
+                    <label>Race</label>
+                    <select name="race">
+                        <option>White</option>
+                        <option>Black</option>
+                        <option>Hispanic</option>
+                        <option>Asian</option>
+                        <option>Indian</option>
+                        <option>Middle-Eastern</option>
+                        <option>Mixed</option>
+                        <option>Other</option>
+                    </select>
+                    <label>Skin Tone</label>
+                    <select name="tone">
+                        <option>Light</option>
+                        <option>Medium</option>
+                        <option>Dark</option>
+                    </select>
+                    <br /> <br />
+                    <input class="btn btn-large btn-success" type="submit"></input>
+                </fieldset>
+            </form>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="{{ BASE_URL }}/static/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
