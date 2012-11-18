@@ -178,5 +178,5 @@ EMAIL_HOST_PASSWORD = 'C0h33dR0cks'
 
 
 
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+#import dj_database_url
+#DATABASES['default'] =  dj_database_url.config()

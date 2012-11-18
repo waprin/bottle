@@ -17,12 +17,15 @@ def submit(request):
     hair_length=""
     race=""
     tone=""
+
     try:
         email = request.GET["email"]
+        email.lower()
     except:
         pass
     try:
         gender = request.GET["gender"]
+        gender = gender.lower()
     except:
         pass
     try:
@@ -40,27 +43,32 @@ def submit(request):
         pass
     try:
         eyes = request.GET["eyes"]
+        eyes = eyes.lower()
     except:
         pass
     try:
         hair_color = request.GET["haircolor"]
+        hair_color = hair_color.lower()
     except:
         pass
     try:
         hair_length = request.GET["hairlength"]
+        hair_length = hair_length.lower()
     except:
         pass
     try:
-        value = request.GET["race"]
+        race = request.GET["race"]
+        race = race.lower()
     except:
         pass
     try:
         tone = request.GET["tone"]
+        tone = tone.lower()
     except:
         pass
 
-    #description = Description(email=email, height=height, age=age, gender=gender, hair_color=hair_color, race=race, eyes=eyes, tone=tone)
-    #description.save()
+    description = Description(email=email, height=height, age=age, gender=gender, hair_color=hair_color, race=race, eyes=eyes, tone=tone)
+    description.save()
     
     return render_to_response('describe/submitted.html', context_instance=RequestContext(request))
     

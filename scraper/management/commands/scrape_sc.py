@@ -23,9 +23,10 @@ class Command(BaseCommand):
             final_url = root_url + ad_url
             
             try:
-                CrushAd.objects.get(sc_id=final_url)
-                self.stdout.write("crush ad already exists\n")
-                continue
+                x = CrushAd.objects.filter(sc_id=ad_url)[:1]
+                if len(x) > 0: 
+                    self.stdout.write("crush ad already exists\n")
+                    continue
             except CrushAd.DoesNotExist:
                 pass
             self.stdout.write("new crush ad, querying now\n")
